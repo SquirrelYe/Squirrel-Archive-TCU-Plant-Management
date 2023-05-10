@@ -1,0 +1,15 @@
+/*首页面格式化时间 */
+var tool = {
+  formatToIndex: function (time) {
+    //时间操作  2019-03-16T08:18:51.000Z
+    var t = time.split("T");
+    var t1 = t[0].split("-");
+    var t2 = t[1].split(":");
+    var n = parseInt(t2[0]) + 8;
+    return n + ":" + t2[1]; // 16:18
+  },
+};
+
+module.exports = {
+  formatToIndex: tool.formatToIndex,
+};
